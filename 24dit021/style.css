@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.top-bar h1 {
+  color: #00b586;
+  font-size: 28px;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-buttons .btn {
+  padding: 6px 14px;
+  background-color: transparent;
+  color: #00c896;
+  border: 1px solid #00c896;
+  border-radius: 5px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.auth-buttons .btn:hover {
+  background-color: #00c896;
+  color: #121212;
+}
+
+.navbar, nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 0;
+  background-color: #181818;
+  border-top: 1px solid #2a2a2a;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.navbar a, nav a {
+  text-decoration: none;
+  color: #00c896;
+  font-weight: 500;
+  padding: 8px 14px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover, nav a:hover {
+  color: #ffffff;
+}
+
+.hero-section {
+  position: relative;
+  text-align: center;
+  color: #00c896;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  filter: brightness(60%);
+  border-top: 2px solid #00c896;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.hero-overlay h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.container, .content, main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1, h2 {
+  color: #00c896;
+  margin-bottom: 15px;
+}
+
+p, ul, li {
+  color: #ccc;
+  font-size: 18px;
+}
+
+ul {
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #1e1e1e;
+  color: #888;
+  text-align: center;
+  padding: 20px 10px;
+  border-top: 1px solid #2a2a2a;
+  margin-top: 40px;
+  font-size: 14px;
+  user-select: none;
+}
+
+.gallery-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  background: #181818;
+  color: #e0e0e0;
+}
+th, td {
+  border: 1px solid #2a2a2a;
+  padding: 12px 10px;
+  text-align: center;
+}
+th {
+  background: #00c896;
+  color: #121212;
+}
+
+.login-container, .register-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px 25px;
+  background-color: #181818;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2, .register-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00c896;
+  font-size: 24px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="email"],
+.login-container input[type="password"],
+.register-container input[type="text"],
+.register-container input[type="number"],
+.register-container input[type="email"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  background: #222;
+  color: #e0e0e0;
+}
+
+.login-container input:focus, .register-container input:focus {
+  border-color: #00c896;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 200, 150, 0.3);
+}
+
+.login-container .btn-submit, .register-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00c896;
+  color: #121212;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-container .btn-submit:hover, .register-container button:hover {
+  background-color: #00b586;
+}
+
+.login-container .form-footer {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-container .form-footer a {
+  color: #00c896;
+  text-decoration: none;
+}
+
+.login-container .form-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .navbar, nav {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 0;
+  }
+  .auth-buttons {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .hero-overlay h1 {
+    font-size: 28px;
+  }
+  .hero-overlay p {
+    font-size: 16px;
+  }
+  .container, .content, main {
+    padding: 0 8px;
+  }
+}
