@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Trainers - FitZone Gym</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      window.onload = function () {
+        alert("Welcome to the Trainers page. Check new FAQ section below.");
+      };
+    </script>
+</head>
+<body>
+  
+  
+  <div class="top-bar">
+    <h1><span class="fitzone-logo">🏋️</span>FitZone</h1>
+    <div class="auth-buttons">
+      <a href="login.html" class="btn">Login</a>
+      <a href="newmember.html" class="btn">Register</a>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="trainers.html" class="active">Trainers</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="membership.html">Membership</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="trainer-header">
+    <h1><span class="fitness-icon">💪</span>Meet Our Trainers</h1>
+    <div class="section-divider"></div>
+    <p>Our certified and passionate fitness professionals are here to guide you on your journey to health and strength.</p>
+  </div>
+
+  <div class="trainer-list">
+    <div class="trainer-card">
+      <h2>Hit Goyani</h2>
+      <div class="specialization">Strength & Conditioning</div>
+      <p>With over 8 years of experience, Hit helps clients build muscle and improve performance with science-backed methods.</p>
+    </div>
+    <div class="trainer-card">
+      <h2>Dhruv Gajera</h2>
+      <div class="specialization">Yoga & Flexibility</div>
+      <p>Certified yoga instructor with a calm and motivating presence. Focuses on mindfulness, mobility, and balance.</p>
+    </div>
+    <div class="trainer-card">
+      <h2>Abhi Patel</h2>
+      <div class="specialization">Cardio & Weight Loss</div>
+      <p>Energetic trainer known for high-intensity fat-burning workouts and customized cardio plans.</p>
+    </div>
+    <div class="trainer-card">
+      <h2>Dev Savani</h2>
+      <div class="specialization">Zumba & Group Fitness</div>
+      <p>Dance your way to fitness with Dev's fun and powerful Zumba sessions. Perfect for all levels!</p>
+    </div>
+  </div>
+
+  <div class="container" style="max-width:500px; margin:40px auto 0 auto;">
+    <h2 style="text-align:center; color:#009e7f;">Contact a Trainer</h2>
+    <form id="trainerContactForm" novalidate>
+      <label for="contactName">Your Name:</label>
+      <input type="text" id="contactName" name="contactName" placeholder="Enter your name" required minlength="2">
+      <div class="error" id="contactNameError"></div>
+      <label for="contactEmail">Your Email:</label>
+      <input type="email" id="contactEmail" name="contactEmail" placeholder="Enter your email" required>
+      <div class="error" id="contactEmailError"></div>
+      <label for="contactMessage">Message:</label>
+      <textarea id="contactMessage" name="contactMessage" placeholder="Type your message" rows="4" required minlength="5"></textarea>
+      <div class="error" id="contactMessageError"></div>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 FitZone Gym. All rights reserved.</p>
+  </footer>
+
+  <div class="container" style="max-width:600px; margin:40px auto 40px auto;">
+    <h2 style="text-align:center; color:#009e7f;">Trainer FAQs</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">What qualifications do your trainers have?</button>
+        <div class="faq-answer" style="display:none;">All our trainers are certified professionals with years of experience in their respective fields.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can I choose my own trainer?</button>
+        <div class="faq-answer" style="display:none;">Yes, you can request a specific trainer based on your fitness goals and preferences.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do trainers provide diet plans?</button>
+        <div class="faq-answer" style="display:none;">Many of our trainers offer basic nutrition guidance and can connect you with our in-house nutritionist for a detailed plan.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="trainers.js"></script>
+
+</body>
+</html>

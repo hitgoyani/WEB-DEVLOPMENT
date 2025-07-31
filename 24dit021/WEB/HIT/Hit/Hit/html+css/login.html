@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - FitZone Gym</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .strength-meter {
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        .btn-submit {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function login(event) {
+            event.preventDefault();
+
+            const password = document.getElementById('password').value;
+            const strength = getPasswordStrength(password);
+
+            if (strength === "Weak") {
+                alert("Please use a stronger password.");
+                return false;
+            }
+
+            alert("Login successful!");
+            return false;
+        }
+
+        function getPasswordStrength(password) {
+            let score = 0;
+
+            if (password.length >= 6) score++;
+            if (/[A-Z]/.test(password)) score++;
+            if (/[0-9]/.test(password)) score++;
+            if (/[^A-Za-z0-9]/.test(password)) score++;
+
+            if (score >= 4) return "Strong";
+            if (score >= 2) return "Medium";
+            return "Weak";
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const passwordField = document.getElementById('password');
+            const strengthMeter = document.getElementById('strengthMeter');
+
+            passwordField.addEventListener('input', function () {
+                const strength = getPasswordStrength(passwordField.value);
+                strengthMeter.textContent = "Strength: " + strength;
+
+                if (strength === "Strong") {
+                    strengthMeter.style.color = "green";
+                } else if (strength === "Medium") {
+                    strengthMeter.style.color = "orange";
+                } else {
+                    strengthMeter.style.color = "red";
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="top-bar">
+        <h1><span class="fitzone-logo">🏋️</span>FitZone</h1>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn">Login</a>
+            <a href="newmember.html" class="btn">Register</a>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a> 
+        <a href="services.html">Services</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="membership.html">Membership</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="login-container">
+        <h2><span class="fitness-icon">🏋️</span>Login to FitZone Gym</h2>
+        <div class="section-divider"></div>
+        
+        <form onsubmit="login(event)">
+            <input type="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <div id="strengthMeter" class="strength-meter">Strength: </div>
+            <button type="submit" class="btn-submit">Login</button>
+        </form>
+
+        <div class="form-footer">
+            Don't have an account? <a href="newmember.html">Register here</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 FitZone Gym. All rights reserved.</p>
+    </footer>
+</body>
+</html>

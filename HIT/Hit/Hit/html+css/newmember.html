@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>New Member Registration - FitZone Gym</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <h1><span class="fitzone-logo">🏋️</span>FitZone</h1>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn">Login</a>
+            <a href="newmember.html" class="btn">Register</a>
+        </div>
+    </div>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="membership.html">Membership</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="trainer-header">
+      <h1><span class="fitness-icon">📝</span>Registration</h1>
+      <div class="section-divider"></div>
+      <p>Become a member and start your fitness journey with us!</p>
+    </div>
+    <div class="register-container">
+      <form id="registrationForm" novalidate>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+        <div class="error" id="nameError"></div>
+        <label for="age">Your Age:</label>
+        <input type="number" id="age" name="age" placeholder="How old are you?" min="12" max="100" required>
+        <div class="error" id="ageError"></div>
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+        <div class="error" id="mobileError"></div>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        <div class="error" id="emailError"></div>
+        <label for="password">Create Password:</label>
+        <input type="password" id="password" name="password" placeholder="Choose a strong password" minlength="6" required>
+        <div id="strengthMeter" style="margin-bottom:8px;"></div>
+        <div class="error" id="passwordError"></div>
+        <button type="submit">Sign Up</button>
+        <a href="index.html" class="btn" style="width:100%;display:inline-block;text-align:center;margin-top:10px;">Back to Home</a>
+      </form>
+    </div>
+    <footer>
+      <p>&copy; 2025 FitZone Gym. All rights reserved.</p>
+    </footer>
+    <script src="register.js"></script>
+</body>
+</html>
