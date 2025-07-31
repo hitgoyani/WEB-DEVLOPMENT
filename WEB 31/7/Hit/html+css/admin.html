@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel - FitZone Gym</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <h1><span class="fitzone-logo">🏋️</span>FitZone</h1>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn">Logout</a>
+        </div>
+    </div>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="admin.html">Admin Panel</a>
+    </nav>
+    <div class="trainer-header">
+        <h1><span class="fitness-icon">🛠️</span>Admin Dashboard</h1>
+        <div class="section-divider"></div>
+        <p>Manage your gym's members, trainers, classes, and feedback.</p>
+    </div>
+    <div class="container">
+        <div style="display:flex; justify-content:flex-end; gap:10px; margin-bottom:20px;">
+            <button id="toggle-dark" class="btn">Dark Theme</button>
+            <button id="toggle-blue" class="btn">Blue Theme</button>
+        </div>
+        <div class="highlights-list">
+            <div class="highlight-card">
+                <h3>Manage Members</h3>
+                <p>View, add, edit, or remove gym members.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>Manage Trainers</h3>
+                <p>Update trainer profiles and specializations.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>Class Schedule</h3>
+                <p>Edit weekly class schedules and assign trainers.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>View Feedback</h3>
+                <p>Read testimonials and member feedback.</p>
+            </div>
+        </div>
+        <p style="margin-top:30px; color:#232323;">For advanced features, connect this panel to a backend system.</p>
+    </div>
+    <script>
+    // Theme toggles
+    document.addEventListener('DOMContentLoaded', function() {
+        const darkBtn = document.getElementById('toggle-dark');
+        const blueBtn = document.getElementById('toggle-blue');
+        function setTheme(theme) {
+            document.body.classList.remove('dark-theme', 'blue-theme');
+            if (theme) document.body.classList.add(theme);
+            localStorage.setItem('theme', theme || '');
+        }
+        darkBtn.addEventListener('click', function() { setTheme('dark-theme'); });
+        blueBtn.addEventListener('click', function() { setTheme('blue-theme'); });
+        // On load, check localStorage
+        const saved = localStorage.getItem('theme');
+        if(saved) setTheme(saved);
+    });
+    </script>
+    <footer>
+        <p>&copy; 2025 FitZone Gym. All rights reserved.</p>
+    </footer>
+</body>
+</html>
